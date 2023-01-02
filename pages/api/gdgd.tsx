@@ -16,7 +16,11 @@ export default async function ogp(req: NextRequest) {
   const hasTitle = searchParams.has("title");
   const title = hasTitle
     ? searchParams.get("title")?.slice(0, 100)
-    : "dev.gdgd.tokyo";
+    : "グダ活：gdgd.tokyo";
+
+  // タグ
+  const hasTag = searchParams.has("tag");
+  const tag = hasTag ? searchParams.get("tag") : "ees";
 
   return new ImageResponse(
     (
@@ -50,6 +54,7 @@ export default async function ogp(req: NextRequest) {
         >
           {title}
         </div>
+        <div>{tag}</div>
       </div>
     ),
     {
