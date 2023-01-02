@@ -15,29 +15,19 @@ export default async function ogp(req: NextRequest) {
 
   // http://localhost:3000/api/dev?title=title&postDate=20220809&tag=%F0%9F%90%B6
 
-  // 記事タイトル
-  const hasTitle = searchParams.has("title");
-  const title = hasTitle
-    ? searchParams.get("title")?.slice(0, 48)
-    : "タイトルなし";
+  // メッセージ
+  const hasMsg = searchParams.has("msg");
+  const msg = hasMsg ? searchParams.get("msg")?.slice(0, 48) : "メッセージなし";
 
   // 投稿日
   const hasPostDate = searchParams.has("postDate");
   let postDate = hasPostDate
     ? searchParams.get("postDate")?.replace(/-/g, "/")
-    : "2023-01-01";
-
-  // タグ
-  const hasTag = searchParams.has("tag");
-  const tag = hasTag ? searchParams.get("tag") : "🥹";
+    : "";
 
   // ユーザー名、Twitter
   const hasUserName = searchParams.has("userName");
-  const userName = hasUserName ? searchParams.get("userName") : "";
-
-  // サイト名
-  const site = "Lang:Lang:Lang";
-  const url = "dev.gdgd.tokyo";
+  const userName = hasUserName ? searchParams.get("userName") : "user@twitter";
 
   return new ImageResponse(
     (
@@ -87,7 +77,7 @@ export default async function ogp(req: NextRequest) {
               // textShadow: "6px 6px 0 rgba(0,0,0,0.1)",
             }}
           >
-            {tag + " " + title}
+            {msg}
           </div>
           <div
             style={{
@@ -97,7 +87,7 @@ export default async function ogp(req: NextRequest) {
               letterSpacing: "1px",
             }}
           >
-            {"🗓️ " + postDate}
+            {postDate}
           </div>
           <div
             style={{
@@ -106,7 +96,7 @@ export default async function ogp(req: NextRequest) {
               justifyContent: "flex-end",
             }}
           >
-            {site + " | " + url}
+            {userName}
           </div>
         </div>
       </div>
