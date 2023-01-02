@@ -6,7 +6,7 @@ export const config = {
 };
 
 const font = fetch(
-  new URL("../../assets/tsukushi_sub.ttf", import.meta.url)
+  new URL("../../assets/ratego_sub.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 export default async function ogp(req: NextRequest) {
@@ -117,7 +117,7 @@ export default async function ogp(req: NextRequest) {
       emoji: "twemoji",
       fonts: [
         {
-          name: "tsukushi_sub",
+          name: "ratego_sub",
           data: fontData,
           style: "normal",
         },
