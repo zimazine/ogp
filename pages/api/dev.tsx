@@ -6,7 +6,7 @@ export const config = {
 };
 
 const font = fetch(
-  new URL("../../assets/tsukushi_sub.ttf", import.meta.url)
+  new URL("../../assets/notojp_sub.otf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 export default async function ogp(req: NextRequest) {
@@ -73,12 +73,12 @@ export default async function ogp(req: NextRequest) {
           <div
             style={{
               width: "100%",
-              fontSize: 56,
+              fontSize: 52,
               fontStyle: "normal",
               fontWeight: "bold",
               color: "#111",
               // padding: "0 60px",
-              lineHeight: 1.6,
+              lineHeight: 1.4,
               justifyContent: "flex-start",
               alignItems: "center",
               marginBottom: "30px",
@@ -117,7 +117,7 @@ export default async function ogp(req: NextRequest) {
       emoji: "twemoji",
       fonts: [
         {
-          name: "tsukushi_sub",
+          name: "notojp_sub",
           data: fontData,
           style: "normal",
         },

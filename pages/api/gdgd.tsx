@@ -5,9 +5,9 @@ export const config = {
   runtime: "experimental-edge",
 };
 
-const font = fetch(
-  new URL("../../assets/notojp_sub.otf", import.meta.url)
-).then((res) => res.arrayBuffer());
+const font = fetch(new URL("../../assets/panda_sub.ttf", import.meta.url)).then(
+  (res) => res.arrayBuffer()
+);
 
 export default async function ogp(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -117,7 +117,7 @@ export default async function ogp(req: NextRequest) {
       emoji: "twemoji",
       fonts: [
         {
-          name: "notojp_sub",
+          name: "panda_sub",
           data: fontData,
           style: "normal",
         },
