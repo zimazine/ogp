@@ -45,7 +45,7 @@ export default async function ogp(req: NextRequest) {
         style={{
           // backgroundImage: "url(https://ogp.gdgd.tokyo/og-bg-default.png)",
           backgroundImage:
-            "linear-gradient(90deg, rgba(105, 234, 203, 1), rgba(215, 98, 252, 1) 67%, rgba(102, 84, 241, 1))",
+            "linear-gradient(148deg, rgba(172,47,102,0.8679621506805848) 0%, rgba(24,146,205,1) 100%)",
           backgroundSize: "100% 100%",
           height: "100%",
           width: "100%",
