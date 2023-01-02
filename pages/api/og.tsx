@@ -22,8 +22,8 @@ export default async function ogp(req: NextRequest) {
     (
       <div
         style={{
-          backgroundImage: "url(https://ogp.gdgd.tokyo/og-bg-default.png)",
-          backgroundColor: "#fff",
+          backgroundImage: "url(http://localhost:3000/enb.jpg)",
+          backgroundColor: "#000",
           backgroundSize: "100% 100%",
           height: "100%",
           width: "100%",
@@ -40,12 +40,13 @@ export default async function ogp(req: NextRequest) {
             fontSize: 60,
             fontStyle: "normal",
             fontWeight: "bold",
-            color: "#fff",
-            padding: "0 120px",
+            color: "#000",
+            padding: "0 240px",
             lineHeight: 1.8,
             justifyContent: "center",
-            marginBottom: "30px",
+            marginBottom: "60px",
             wordWrap: "break-word",
+            textShadow: "6px 6px 0 rgba(0,0,0,0.1)",
           }}
         >
           {title}
