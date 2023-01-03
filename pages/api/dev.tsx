@@ -73,7 +73,7 @@ export default async function ogp(req: NextRequest) {
           <div
             style={{
               width: "100%",
-              fontSize: 52,
+              fontSize: 64,
               fontStyle: "normal",
               fontWeight: "bold",
               color: "#111",
