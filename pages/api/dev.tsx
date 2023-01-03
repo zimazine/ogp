@@ -106,7 +106,7 @@ export default async function ogp(req: NextRequest) {
           <div
             style={{
               fontSize: 32,
-              flexBasis: "80%",
+              flexBasis: "60%",
               justifyContent: "flex-end",
               padding: "4px 8px",
               height: "48px",
