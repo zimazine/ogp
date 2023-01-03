@@ -25,7 +25,7 @@ export default async function ogp(req: NextRequest) {
   const hasPostDate = searchParams.has("postDate");
   let postDate = hasPostDate
     ? searchParams.get("postDate")?.replace(/-/g, "/")
-    : "2023-01-01";
+    : "N/A";
 
   // カテゴリー
   const hasCat = searchParams.has("cat");
