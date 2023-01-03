@@ -87,23 +87,45 @@ export default async function ogp(req: NextRequest) {
               // textShadow: "6px 6px 0 rgba(0,0,0,0.1)",
             }}
           >
-            {"[" + cat + "]" + " " + title}
+            {title}
           </div>
           <div
             style={{
-              flexBasis: "30%",
-              fontSize: 24,
+              fontSize: 20,
               justifyContent: "flex-start",
-              letterSpacing: "1px",
+              background: "rgba(255,255,255,0.4)",
+              padding: "4px 8px",
+              marginRight: "12px",
+              height: "36px",
+              lineHeight: "18px",
+              borderRadius: "4px",
             }}
           >
-            {"🗓️ " + postDate}
+            {cat}
           </div>
           <div
             style={{
-              flexBasis: "70%",
-              fontSize: 24,
+              fontSize: 20,
+              justifyContent: "flex-start",
+              background: "rgba(255,255,255,0.4)",
+              padding: "4px 8px",
+              marginRight: "12px",
+              height: "36px",
+              lineHeight: "18px",
+              letterSpacing: "2px",
+              borderRadius: "4px",
+            }}
+          >
+            {postDate}
+          </div>
+          <div
+            style={{
+              fontSize: 20,
+              flexBasis: "60%",
               justifyContent: "flex-end",
+              padding: "4px 8px",
+              height: "36px",
+              lineHeight: "18px",
             }}
           >
             {site + " | " + url}
