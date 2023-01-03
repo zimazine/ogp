@@ -27,15 +27,15 @@ export default async function ogp(req: NextRequest) {
     ? searchParams.get("postDate")?.replace(/-/g, "/")
     : "2023-01-01";
 
-  // タグ
-  const hasTag = searchParams.has("tag");
-  const tag = hasTag ? searchParams.get("tag") : "🥹";
+  // カテゴリー
+  const hasCat = searchParams.has("cat");
+  const cat = hasCat ? searchParams.get("cat") : "🥹";
 
   // ユーザー名、Twitter
   const hasUserName = searchParams.has("userName");
   const userName = hasUserName ? searchParams.get("userName") : "";
 
-  // サイト名
+  // サイト名(固定)
   const site = "Lang:Lang:Lang";
   const url = "dev.gdgd.tokyo";
 
@@ -45,7 +45,7 @@ export default async function ogp(req: NextRequest) {
         style={{
           // backgroundImage: "url(https://ogp.gdgd.tokyo/og-bg-default.png)",
           backgroundImage:
-            "linear-gradient(90deg, rgba(105, 234, 203, 1), rgba(215, 98, 252, 1) 67%, rgba(102, 84, 241, 1))",
+            "linear-gradient(298deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)",
           backgroundSize: "100% 100%",
           height: "100%",
           width: "100%",
@@ -87,7 +87,7 @@ export default async function ogp(req: NextRequest) {
               // textShadow: "6px 6px 0 rgba(0,0,0,0.1)",
             }}
           >
-            {tag + " " + title}
+            {"[" + cat + "]" + " " + title}
           </div>
           <div
             style={{
