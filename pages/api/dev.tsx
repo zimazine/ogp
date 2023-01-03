@@ -96,8 +96,8 @@ export default async function ogp(req: NextRequest) {
               background: "rgba(255,255,255,0.4)",
               padding: "4px 8px",
               marginRight: "12px",
-              height: "36px",
-              lineHeight: "18px",
+              height: "48px",
+              lineHeight: "24px",
               borderRadius: "4px",
             }}
           >
@@ -109,8 +109,8 @@ export default async function ogp(req: NextRequest) {
               flexBasis: "85%",
               justifyContent: "flex-end",
               padding: "4px 8px",
-              height: "36px",
-              lineHeight: "18px",
+              height: "48px",
+              lineHeight: "24px",
             }}
           >
             {site}
