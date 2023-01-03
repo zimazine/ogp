@@ -37,7 +37,7 @@ export default async function ogp(req: NextRequest) {
 
   // サイト名(固定)
   const site = "Lang:Lang:Lang";
-  const url = "dev.gdgd.tokyo";
+  // const url = "dev.gdgd.tokyo";
 
   return new ImageResponse(
     (
@@ -128,7 +128,7 @@ export default async function ogp(req: NextRequest) {
               lineHeight: "18px",
             }}
           >
-            {site + " | " + url}
+            {site}
           </div>
         </div>
       </div>
