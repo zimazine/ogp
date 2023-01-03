@@ -78,7 +78,7 @@ export default async function ogp(req: NextRequest) {
               fontWeight: "bold",
               color: "#111",
               // padding: "0 60px",
-              lineHeight: 1.4,
+              lineHeight: 1.2,
               justifyContent: "flex-start",
               alignItems: "center",
               marginBottom: "30px",
