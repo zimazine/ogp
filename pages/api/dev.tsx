@@ -18,7 +18,7 @@ export default async function ogp(req: NextRequest) {
   // 記事タイトル
   const hasTitle = searchParams.has("title");
   const title = hasTitle
-    ? searchParams.get("title")?.slice(0, 48)
+    ? searchParams.get("title")?.slice(0, 40)
     : "タイトルなし";
 
   // 投稿日
@@ -93,12 +93,13 @@ export default async function ogp(req: NextRequest) {
             style={{
               fontSize: 32,
               justifyContent: "flex-start",
+              // background: "green",
               background: "rgba(255,255,255,0.4)",
               padding: "4px 8px",
-              marginRight: "12px",
               height: "48px",
               lineHeight: "24px",
-              borderRadius: "4px",
+              border: "2px solid rgba(0,0,0,0.8)",
+              flexBasis: "35%",
             }}
           >
             {cat}
@@ -106,11 +107,12 @@ export default async function ogp(req: NextRequest) {
           <div
             style={{
               fontSize: 32,
-              flexBasis: "60%",
+              flexBasis: "65%",
               justifyContent: "flex-end",
               padding: "4px 8px",
               height: "48px",
               lineHeight: "24px",
+              // background: "red",
             }}
           >
             {site}
