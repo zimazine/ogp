@@ -13,12 +13,12 @@ export default async function ogp(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const fontData = await font;
 
-  // http://localhost:3000/api/dev?title=title&postDate=20220809&tag=%F0%9F%90%B6
+  // http://localhost:3000/api/note?title=タイトル&postDate=20220809&tag=%F0%9F%90%B6
 
   // メッセージ
-  const hasTitle = searchParams.has("msg");
+  const hasTitle = searchParams.has("title");
   const title = hasTitle
-    ? searchParams.get("msg")?.slice(0, 48)
+    ? searchParams.get("title")?.slice(0, 48)
     : "メッセージなし";
 
   // 投稿日
