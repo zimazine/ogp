@@ -5,27 +5,35 @@ export const config = {
   runtime: "experimental-edge",
 };
 
-const font = fetch(
-  new URL("../../assets/notojp_sub.otf", import.meta.url)
-).then((res) => res.arrayBuffer());
+const font = fetch(new URL("../../assets/panda_sub.ttf", import.meta.url)).then(
+  (res) => res.arrayBuffer()
+);
 
 export default async function ogp(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const fontData = await font;
 
-  // http://localhost:3000/api/dev?title=title&postDate=20220809&tag=%F0%9F%90%B6
+  // http://localhost:3000/api/gdgd?title=title&postDate=2022-08-09&tag=%F0%9F%90%B6
 
-  // メッセージ
-  const hasTitle = searchParams.has("msg");
+  // 記事タイトル
+  const hasTitle = searchParams.has("title");
   const title = hasTitle
-    ? searchParams.get("msg")?.slice(0, 48)
-    : "メッセージなし";
+    ? searchParams.get("title")?.slice(0, 48)
+    : "タイトルなし";
 
   // 投稿日
   const hasPostDate = searchParams.has("postDate");
   let postDate = hasPostDate
     ? searchParams.get("postDate")?.replace(/-/g, "/")
-    : "";
+    : "XXXX-XX-XX";
+
+  // タグ
+  const hasTag = searchParams.has("tag");
+  const tag = hasTag ? searchParams.get("tag") : "🥹";
+
+  // ユーザー名、Twitter
+  const hasUserName = searchParams.has("userName");
+  const userName = hasUserName ? searchParams.get("userName") : "";
 
   // サイト名
   const site = "gdgd Note";
@@ -79,7 +87,7 @@ export default async function ogp(req: NextRequest) {
               textShadow: "6px 6px 0 rgba(0,0,0,0.1)",
             }}
           >
-            {title}
+            {tag + " " + title}
           </div>
           <div
             style={{
