@@ -13,7 +13,7 @@ export default async function ogp(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const fontData = await font;
 
-  // http://localhost:3000/api/dev?title=title&postDate=20220809&tag=%F0%9F%90%B6
+  // http://localhost:3000/api/gdgd?title=title&postDate=2022-08-09&tag=%F0%9F%90%B6
 
   // 記事タイトル
   const hasTitle = searchParams.has("title");
