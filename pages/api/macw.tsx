@@ -57,7 +57,7 @@ export default async function ogp(req: NextRequest) {
           <div
             style={{
               width: "100%",
-              height: "40px",
+              height: "48px",
               background: "#ECECEC",
               color: "#666",
               borderBottom: "1px solid #CCC",
@@ -77,8 +77,8 @@ export default async function ogp(req: NextRequest) {
             >
               <div
                 style={{
-                  width: "10px",
-                  height: "10px",
+                  width: "16px",
+                  height: "16px",
                   borderRadius: "50%",
                   margin: "0 3px",
                   cursor: "pointer",
@@ -88,8 +88,8 @@ export default async function ogp(req: NextRequest) {
               ></div>
               <div
                 style={{
-                  width: "10px",
-                  height: "10px",
+                  width: "16x",
+                  height: "16px",
                   borderRadius: "50%",
                   margin: "0 3px",
                   cursor: "pointer",
@@ -99,8 +99,8 @@ export default async function ogp(req: NextRequest) {
               ></div>
               <div
                 style={{
-                  width: "10px",
-                  height: "10px",
+                  width: "16px",
+                  height: "16px",
                   borderRadius: "50%",
                   margin: "0 3px",
                   cursor: "pointer",
@@ -131,7 +131,7 @@ export default async function ogp(req: NextRequest) {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              fontSize: "54px",
+              fontSize: "64px",
               color: "#272727",
               letterSpacing: "0.1rem",
             }}
