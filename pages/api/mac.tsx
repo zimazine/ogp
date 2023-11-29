@@ -123,7 +123,7 @@ export default async function ogp(req: NextRequest) {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              fontSize: "48px",
+              fontSize: "54px",
               color: "#d5d5d5",
               letterSpacing: "0.1rem",
             }}
