@@ -144,6 +144,7 @@ export default async function ogp(req: NextRequest) {
               alignItems: "center",
               fontSize: "28px",
               color: "#d5d5d5",
+              letterSpacing: "0.1rem",
             }}
           >
             <p style={{}}>🗓️ {postDate}</p>
