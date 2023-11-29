@@ -31,6 +31,10 @@ export default async function ogp(req: NextRequest) {
   const site = "gdgd note";
   const url = "note.gdgd.tokyo";
 
+  // ユーザー
+  const user = "ぐだぐだマン";
+  const twitter = "@gdgd_devs";
+
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100vh", display: "flex" }}>
@@ -138,16 +142,35 @@ export default async function ogp(req: NextRequest) {
           </div>
           <div
             style={{
-              width: "1180px",
+              width: "100%",
+              height: "20%",
               display: "flex",
-              justifyContent: "flex-end",
-              alignItems: "center",
               fontSize: "28px",
               color: "#d5d5d5",
               letterSpacing: "0.1rem",
             }}
           >
-            <p style={{}}>🗓️ {postDate}</p>
+            <div
+              style={{
+                flexBasis: "35%",
+                background: "#111",
+                marginLeft: "5.5rem",
+                display: "flex",
+                paddingBottom: "4px",
+              }}
+            >
+              {user + twitter}
+            </div>
+            <div
+              style={{
+                flexBasis: "60%",
+                marginRight: "5.5rem",
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              🗓️ {postDate}
+            </div>
           </div>
         </div>
       </div>
