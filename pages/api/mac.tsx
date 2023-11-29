@@ -137,7 +137,7 @@ export default async function ogp(req: NextRequest) {
                 width: "1024px",
               }}
             >
-              {title}
+              🗒️ {title}
             </p>
           </div>
           <div
