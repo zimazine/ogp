@@ -35,6 +35,10 @@ export default async function ogp(req: NextRequest) {
   const user = "ぐだぐだマン";
   const twitter = "@gdgd_devs";
 
+  // アイコン
+  const hasTag = searchParams.has("tag");
+  let tag = hasTag ? searchParams.get("tag")?.replace(/-/g, "/") : "🗒️";
+
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100vh", display: "flex" }}>
@@ -137,7 +141,7 @@ export default async function ogp(req: NextRequest) {
                 width: "1024px",
               }}
             >
-              🗒️ {title}
+              {tag} {title}
             </p>
           </div>
           <div
@@ -146,7 +150,6 @@ export default async function ogp(req: NextRequest) {
               height: "20%",
               display: "flex",
               fontSize: "28px",
-              color: "#666",
               letterSpacing: "0.1rem",
             }}
           >
@@ -157,6 +160,7 @@ export default async function ogp(req: NextRequest) {
                 marginLeft: "5.5rem",
                 display: "flex",
                 paddingBottom: "4px",
+                color: "#272727",
               }}
             >
               {user + twitter}
@@ -167,6 +171,7 @@ export default async function ogp(req: NextRequest) {
                 marginRight: "5.5rem",
                 display: "flex",
                 justifyContent: "flex-end",
+                color: "#272727",
               }}
             >
               🗓️ {postDate}
