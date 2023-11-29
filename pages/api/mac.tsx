@@ -13,7 +13,7 @@ export default async function ogp(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const fontData = await font;
 
-  // http://localhost:3000/api/note?title=タイトル&postDate=20220809&tag=%F0%9F%90%B6
+  // http://localhost:3000/api/mac?title=美味しいパスタお前と大貧民したあとパチンコ屋に行って化粧品もらったから謝りに行こう&postDate=2022-08-09&tag=%F0%9F%90%B6
 
   // メッセージ
   const hasTitle = searchParams.has("title");
@@ -138,7 +138,7 @@ export default async function ogp(req: NextRequest) {
           </div>
           <div
             style={{
-              width: "1080px",
+              width: "1180px",
               display: "flex",
               justifyContent: "flex-end",
               alignItems: "center",
