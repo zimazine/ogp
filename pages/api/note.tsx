@@ -28,7 +28,7 @@ export default async function ogp(req: NextRequest) {
     : "";
 
   // サイト名
-  const site = "gdgd Note";
+  const site = "gdgd note";
   const url = "note.gdgd.tokyo";
 
   return new ImageResponse(
