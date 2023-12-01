@@ -31,7 +31,7 @@ export default async function ogp(req: NextRequest) {
     : "";
 
   // サイト名
-  const site = "gdgd note";
+  const site = "ぐだノート";
   const url = "note.gdgd.tokyo";
 
   // ユーザー
@@ -160,11 +160,12 @@ export default async function ogp(req: NextRequest) {
             <div
               style={{
                 flexBasis: "35%",
-                background: "#111",
+                background: "#333",
                 marginLeft: "5.5rem",
                 display: "flex",
                 paddingBottom: "4px",
                 alignItems: "center",
+                paddingLeft: "1.2rem",
               }}
             >
               {/* <img
@@ -176,7 +177,7 @@ export default async function ogp(req: NextRequest) {
               /> */}
               {user + twitter}
             </div>
-            <div
+            {/* <div
               style={{
                 flexBasis: "60%",
                 marginRight: "5.5rem",
@@ -185,7 +186,7 @@ export default async function ogp(req: NextRequest) {
               }}
             >
               🗓️ {postDate}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
