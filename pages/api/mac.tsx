@@ -5,6 +5,9 @@ export const config = {
   runtime: "experimental-edge",
 };
 
+const x =
+  '<svg width="300" height="271" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"/></svg>';
+
 const font = fetch(
   new URL("../../assets/notojp_sub.otf", import.meta.url)
 ).then((res) => res.arrayBuffer());
@@ -77,8 +80,8 @@ export default async function ogp(req: NextRequest) {
             >
               <div
                 style={{
-                  width: "10px",
-                  height: "10px",
+                  width: "16px",
+                  height: "16px",
                   borderRadius: "50%",
                   margin: "0 3px",
                   cursor: "pointer",
@@ -88,8 +91,8 @@ export default async function ogp(req: NextRequest) {
               ></div>
               <div
                 style={{
-                  width: "10px",
-                  height: "10px",
+                  width: "16px",
+                  height: "16px",
                   borderRadius: "50%",
                   margin: "0 3px",
                   cursor: "pointer",
@@ -99,8 +102,8 @@ export default async function ogp(req: NextRequest) {
               ></div>
               <div
                 style={{
-                  width: "10px",
-                  height: "10px",
+                  width: "16px",
+                  height: "16px",
                   borderRadius: "50%",
                   margin: "0 3px",
                   cursor: "pointer",
@@ -131,7 +134,7 @@ export default async function ogp(req: NextRequest) {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              fontSize: "54px",
+              fontSize: "64px",
               color: "#d5d5d5",
               letterSpacing: "0.1rem",
             }}
@@ -161,8 +164,16 @@ export default async function ogp(req: NextRequest) {
                 marginLeft: "5.5rem",
                 display: "flex",
                 paddingBottom: "4px",
+                alignItems: "center",
               }}
             >
+              {/* <img
+                src={`data:image/svg+xml,${encodeURIComponent(x)}`}
+                width={28}
+                height={26}
+                alt="logo"
+                style={{ transform: "translateY(4px)" }}
+              /> */}
               {user + twitter}
             </div>
             <div
