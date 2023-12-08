@@ -160,8 +160,8 @@ export default async function ogp(req: NextRequest) {
                 marginLeft: "5.5rem",
                 display: "flex",
                 paddingBottom: "4px",
-                color: "#272727",
-                paddingLeft: "1rem",
+                alignItems: "center",
+                paddingLeft: "1.2rem",
               }}
             >
               <img
