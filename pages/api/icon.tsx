@@ -125,7 +125,6 @@ export default async function ogp(req: NextRequest) {
               }}
             >
               {site} | {url}
-              <img src="https://ogp.gdgd.tokyo/og-bg-default.png" alt="" />
             </p>
           </div>
           <div
@@ -160,7 +159,7 @@ export default async function ogp(req: NextRequest) {
           >
             <div
               style={{
-                flexBasis: "35%",
+                flexBasis: "40%",
                 background: "#333",
                 marginLeft: "5.5rem",
                 display: "flex",
@@ -176,6 +175,12 @@ export default async function ogp(req: NextRequest) {
                 alt="logo"
                 style={{ transform: "translateY(4px)" }}
               /> */}
+              <img
+                src="https://ogp.gdgd.tokyo/gdgd.png"
+                width={64}
+                height={64}
+                alt=""
+              />
               {user + twitter}
             </div>
             {/* <div
